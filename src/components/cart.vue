@@ -50,8 +50,11 @@
     >
       Continue shopping
     </button>
-    <button class="m-3 btn btn-sm btn-primary" @click="confirmOrder()">
+    <button v-if="user" class="m-3 btn btn-sm btn-primary" @click="confirmOrder()">
       Confirm Order
+    </button>
+    <button v-if="!user" class="m-3 btn btn-sm btn-primary" @click="$router.push('login')">
+      Login to confirm order
     </button>
   </div>
   <div v-else> 

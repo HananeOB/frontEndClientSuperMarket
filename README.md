@@ -1,6 +1,9 @@
 # client-app
 ## App description :
-This is the front end of a supermarket management App build using VueJS 
+* This is the front end of a supermarket management App build using VueJS.  
+
+* This image describes the flow of data in the enture app (front and back end):  
+![alt text](./src/assets/data.png)
 ## Project setup
 Firstly, clone this repository to the current directory:
 ```

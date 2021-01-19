@@ -159,6 +159,7 @@ export default {
   },
 
   mounted() {
+    // Read data from local strorage if it exists 
     if (localStorage.cart) {
       this.cart = JSON.parse(localStorage.cart);
     }
@@ -169,11 +170,12 @@ export default {
     
   },
   watch: {
+    // Modifie stored data whenever we change it 
     cart: {
       handler(newCart) {
         localStorage.cart = JSON.stringify(newCart);
       },
-      deep: true,
+      deep: true, // Since we have a list
     },
   },
 };

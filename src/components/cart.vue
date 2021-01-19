@@ -124,11 +124,13 @@ export default {
             product : item.id,
             quantity : item.quantity,
           };
-
+          let bought_quantity = +item.quantity+ (Math.trunc(item.quantity*(+(item.discounts==='b' )) / 2));
           let newProduct = {
             price : item.price,
-            available_quantity : (item.available_quantity - item.quantity),
+            available_quantity : item.available_quantity - bought_quantity,
           }
+          console.log( bought_quantity);
+          console.log(newProduct.available_quantity);
 
           OrderDataService
           .createOrderItems(orderItem)
